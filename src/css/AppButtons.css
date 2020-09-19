@@ -1,0 +1,36 @@
+.appButtons {
+   display: flex;
+   justify-content: space-evenly;
+   position: fixed;
+   bottom: 10vh;
+   width: 100%;
+}
+
+.appButtons .MuiIconButton-root {
+    background-color: #f5c0c0;
+    box-shadow: 0px 10px 53px rgba(0, 0, 0, 0.3) !important;
+}
+
+.appButtons__left {
+    color: #ec5e6f !important;
+    padding: 3vw !important;
+}
+.appButtons__right {
+    color: rgb(106, 243, 106) !important;
+    padding: 3vw !important;
+}
+
+.appButtons__star {
+    color: #62b4f9 !important;
+    padding: 3vw !important;
+}
+
+.appButtons__repeat {
+    color: #f5b748 !important;
+    padding: 3vw !important;
+}
+
+.appButtons__flash {
+    color: #915dd1 !important;
+    padding: 3vw !important;
+}
