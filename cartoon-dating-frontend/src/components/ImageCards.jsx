@@ -1,19 +1,25 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import TinderCard from "react-tinder-card";
+import axios from '../axios';
 import '../css/ImageCards.css';
 
 function ImageCards() {
-    const [cartoon, setCartoon]= useState([
-        {
-            name: 'Johnny Bravo',
-            url: "https://cdn.worldvectorlogo.com/logos/johnny-bravo-2.svg",
-        },
-        {
-            name: 'Daria',
-            url: "https://thefullest.com/wp-content/uploads/2018/05/Daria-Header.jpg",
-        },
-    ]);
+    const [cartoon, setCartoon]= useState([]);
 
+    useEffect(() => {
+        async function fetchData() {
+            const req = await axios.get('/cartoondating/cards');
+
+            setCartoon(req.data);
+        }
+
+        fetchData();
+    },[]);
+
+    console.log(cartoon);
+
+       
+    
     // Swiping functio---> console.log is for debugging 
     const swiped = (direction, nameToDelete) => {
         console.log("bounce out:" + nameToDelete);
@@ -36,7 +42,7 @@ function ImageCards() {
                     onCardLeftScreen={() => outOfFrame(cartoon.name)}>
 
                 <div 
-                style={{ backgroundImage: `url(${cartoon.url})`}} 
+                style={{ backgroundImage: `url(${cartoon.imgUrl})`}} 
                 className="card">
                     <h3>{cartoon.name}</h3>
                 </div>

@@ -11,7 +11,7 @@ function Heading() {
                 <PersonSharpIcon fontSize="large" className="heading__icon"/>
             </IconButton>
 
-            <h3 className='heading__title'>Character Dating</h3>
+            <h3 className='heading__title'><span className='cartoon-tile-1'>Cartoon</span> Cartoon <span className="cartoon-tile-2">Dating</span></h3>
 
             <IconButton>
             <ForumIcon fontSize="large" className="heading__icon"/>

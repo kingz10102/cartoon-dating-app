@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .heading {
     display: flex;
     align-items: center;
@@ -9,4 +10,12 @@
 
 .heading__title {
     height: 40px;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+}
+.cartoon-tile-1 {
+    color: rgb(255, 225, 126);
+}
+.cartoon-tile-2 {
+    color:rgb(255, 93, 93)
 }
